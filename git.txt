@@ -1,0 +1,129 @@
+Microsoft Windows [version 10.0.18363.535]
+(c) 2019 Microsoft Corporation. Tous droits réservés.
+
+C:\Users\DELL>git --version
+git version 2.25.0.windows.1
+
+C:\Users\DELL>git config --global user.name "Abdou Aziz Seye"
+
+C:\Users\DELL>git config --global user.email "zizaseye97@gmail.com"
+
+C:\Users\DELL>D:
+
+D:\>mkdir GitRep
+
+D:\>cd GitRep
+
+D:\GitRep>git init
+Initialized empty Git repository in D:/GitRep/.git/
+
+D:\GitRep>git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+D:\GitRep>git add index.html
+
+D:\GitRep>git commit -m "projet initial"
+[master (root-commit) eed6b80] projet initial
+ 1 file changed, 12 insertions(+)
+ create mode 100644 index.html
+
+D:\GitRep>git add index.html
+
+D:\GitRep>git commit -m "modification de la couleur"
+[master 02174a5] modification de la couleur
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+D:\GitRep>git log
+commit 02174a5d54486e89d2c62457000a309828ab01e3 (HEAD -> master)
+Author: Abdou Aziz Seye <zizaseye97@gmail.com>
+Date:   Sun Mar 22 15:17:56 2020 +0000
+
+    modification de la couleur
+
+commit eed6b8034a418831545d1a3177a8b5a8e2a59113
+Author: Abdou Aziz Seye <zizaseye97@gmail.com>
+Date:   Sun Mar 22 15:14:51 2020 +0000
+
+    projet initial
+
+D:\GitRep> git branch backgroundColor
+
+D:\GitRep> git branch
+  backgroundColor
+* master
+
+D:\GitRep>git checkout backgroundColor
+Switched to branch 'backgroundColor'
+
+D:\GitRep> git branch
+* backgroundColor
+  master
+
+D:\GitRep>git add index.html
+
+D:\GitRep>git commit -m "modification de la couleur de font"
+[backgroundColor 0be66c6] modification de la couleur de font
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+D:\GitRep>git log
+commit 0be66c68c0a55d1b8ac254f7ceededc99ca4a0e3 (HEAD -> backgroundColor)
+Author: Abdou Aziz Seye <zizaseye97@gmail.com>
+Date:   Sun Mar 22 15:27:51 2020 +0000
+
+    modification de la couleur de font
+
+commit 02174a5d54486e89d2c62457000a309828ab01e3 (master)
+Author: Abdou Aziz Seye <zizaseye97@gmail.com>
+Date:   Sun Mar 22 15:17:56 2020 +0000
+
+    modification de la couleur
+
+commit eed6b8034a418831545d1a3177a8b5a8e2a59113
+Author: Abdou Aziz Seye <zizaseye97@gmail.com>
+Date:   Sun Mar 22 15:14:51 2020 +0000
+
+    projet initial
+
+D:\GitRep>git checkout master
+Switched to branch 'master'
+
+D:\GitRep>git branch
+  backgroundColor
+* master
+
+D:\GitRep>git merge backgroundColor
+Updating 02174a5..0be66c6
+Fast-forward
+ index.html | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+D:\GitRep>git log
+commit 0be66c68c0a55d1b8ac254f7ceededc99ca4a0e3 (HEAD -> master, backgroundColor)
+Author: Abdou Aziz Seye <zizaseye97@gmail.com>
+Date:   Sun Mar 22 15:27:51 2020 +0000
+
+    modification de la couleur de font
+
+commit 02174a5d54486e89d2c62457000a309828ab01e3
+Author: Abdou Aziz Seye <zizaseye97@gmail.com>
+Date:   Sun Mar 22 15:17:56 2020 +0000
+
+    modification de la couleur
+
+commit eed6b8034a418831545d1a3177a8b5a8e2a59113
+Author: Abdou Aziz Seye <zizaseye97@gmail.com>
+Date:   Sun Mar 22 15:14:51 2020 +0000
+
+    projet initial
+
+D:\GitRep>git branch -d backgroundColor
+Deleted branch backgroundColor (was 0be66c6).
+
+D:\GitRep>git branch
+* master
+
+D:\GitRep>
